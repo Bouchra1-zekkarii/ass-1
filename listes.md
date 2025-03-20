@@ -198,9 +198,23 @@ Pour tous ces parcours de listes, il est conseillé d'utiliser des noms de varia
 (ex4.1)=
 ### Exercice
 
+l =[5,12,48,-2,0,-48,5,12]
+def posmax(l):
+    m, k=l[0],0
+    for i, e in enumerate(l):
+        if e > m:
+            m =e
+            k=i
+    return m,k
+   
+   
+print("Max est ", posmax(l))
+
 ```{admonition} Exercice 4.1 : Argmax
 Écrivez une fonction en Python qui permette de calculer l'argmax d'une liste, c'est-à-dire l'indice auquel est stockée la valeur maximale de la liste.
 Si cette valeur maximale est présente plusieurs fois dans la liste, on retournera l'indice de sa première occurrence.
+
+
 ```
 
 <div id="pad_4.1" class="pad"></div>
@@ -511,4 +525,23 @@ Bien entendu, pour pouvoir utiliser `zip()`, il faut que les listes soient de m�
 
 1. [Argmax](ex4.1)
 2. [Intersection de listes](ex4.2)
+
+
+###exercice
+l1=[2,5,8,12,14,3]
+l2=[3,1,-1]
+
+
+def intersection(l1,l2):
+  l3=list()
+  for e in l1:
+    if e in l2:
+        l3.append(e)
+  return l3
+print(intersection(l1,l2))
+
+
+
 3. [Union de listes](ex4.3)
+
+
