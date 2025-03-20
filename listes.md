@@ -524,10 +524,23 @@ Bien entendu, pour pouvoir utiliser `zip()`, il faut que les listes soient de mÃ
 ## Liste des exercices de ce chapitre
 
 1. [Argmax](ex4.1)
+###correction
+l =[5,12,48,-2,0,-48,5,12]
+def posmax(l):
+    m, k=l[0],0
+    for i, e in enumerate(l):
+        if e > m:
+            m =e
+            k=i
+    return m,k
+   
+   
+print("Max est ", posmax(l))
+
 2. [Intersection de listes](ex4.2)
 
 
-###exercice
+###correction
 l1=[2,5,8,12,14,3]
 l2=[3,1,-1]
 
